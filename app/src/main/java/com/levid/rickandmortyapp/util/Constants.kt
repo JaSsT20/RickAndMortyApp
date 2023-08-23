@@ -1,4 +1,3 @@
 package com.levid.rickandmortyapp.util
 
-class Constants {
-}
+const val BASE_URL = "https://rickandmortyapi.com/api/"
