@@ -1,5 +1,5 @@
 package com.levid.rickandmortyapp.data.source.remote.dto
-
+import com.levid.rickandmortyapp.domain.model.Character
 data class CharacterDto(
     val created: String,
     val episode: List<String>,
@@ -14,3 +14,16 @@ data class CharacterDto(
     val type: String,
     val url: String
 )
+
+fun CharacterDto.toCharacter(): Character{
+    return Character(
+        id = id,
+        name = name,
+        status = status,
+        specie = species,
+        origin = origin,
+        gender = gender,
+        location = location,
+        image = image
+    )
+}
